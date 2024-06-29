@@ -5,8 +5,6 @@ public class Main {
 
     static Scanner sc = new Scanner(System.in);
 
-    static Random random = new Random();
-
     public static void main(String[] args) {
 
         System.out.println("Welcome to the Magical-Arena, Please register yourself in the arena\n");

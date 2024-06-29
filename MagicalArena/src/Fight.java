@@ -18,11 +18,11 @@ public class Fight {
     public static void fight(Player attacker, Player defender) {
 
         System.out.println("Attacker started to roll the dice");
-        int attackDiceRollValue = DiceUtil.rollYourDice(Main.random);
+        int attackDiceRollValue = DiceUtil.rollYourDice();
         System.out.printf("Attacker got the dice number as: %s%n", attackDiceRollValue);
 
         System.out.println("Defender started to roll the dice");
-        int defendDiceRollValue = DiceUtil.rollYourDice(Main.random);
+        int defendDiceRollValue = DiceUtil.rollYourDice();
         System.out.printf("Defender got the dice number as: %s%n", defendDiceRollValue);
 
         int attackDamage = attacker.attack * attackDiceRollValue;
