@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class RegisterPlayer {
 
-    public static Player registerPlayer(Scanner sc) {
+     Player registerPlayer(Scanner sc) {
         int health, strength, attack;
         System.out.println("1) Health");
         health = sc.nextInt();

@@ -1,7 +1,12 @@
 public class Fight {
 
+    void fightBetween2Players(Player playerA, Player playerB) {
 
-    static void fightBetween2Players(Player playerA, Player playerB) {
+        if(playerA.attack == 0 && playerB.attack == 0 ) {
+            System.out.println("Both players don't have a fighting capacity, Hence ending the game");
+            return;
+        }
+
         while (playerA.health > 0 && playerB.health > 0) {
             if (playerA.health >= playerB.health) {
                 playerBWillAttackAndPlayerAWillDefend(playerA, playerB);
@@ -15,7 +20,7 @@ public class Fight {
         }
     }
 
-    public static void fight(Player attacker, Player defender) {
+     void fight(Player attacker, Player defender) {
 
         System.out.println("Attacker started to roll the dice");
         int attackDiceRollValue = DiceUtil.rollYourDice();
@@ -38,7 +43,7 @@ public class Fight {
 
     }
 
-    static void playerBWillAttackAndPlayerAWillDefend(Player playerA, Player playerB) {
+    void playerBWillAttackAndPlayerAWillDefend(Player playerA, Player playerB) {
         System.out.println("\nPlayerB will attack and PlayerA will defend");
         fight(playerB, playerA);
         if (checkPlayerHealthIsZeroOrNot(playerA)) {
@@ -46,7 +51,7 @@ public class Fight {
         }
     }
 
-    static void playerAWillAttackPlayerBWillDefend(Player playerA, Player playerB) {
+    void playerAWillAttackPlayerBWillDefend(Player playerA, Player playerB) {
         System.out.println("\nPlayerA will attack and PlayerB will defend");
         fight(playerA, playerB);
         if (checkPlayerHealthIsZeroOrNot(playerB)) {
@@ -54,7 +59,7 @@ public class Fight {
         }
     }
 
-    static boolean checkPlayerHealthIsZeroOrNot(Player player) {
+    boolean checkPlayerHealthIsZeroOrNot(Player player) {
         return player.health <= 0;
     }
 
